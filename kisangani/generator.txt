@@ -1,0 +1,13 @@
+root:
+[syl]
+[syl][syl]*2
+[syl][syl][syl]
+
+syl:
+[C][V]*4
+[N][C][V]
+
+C: b*2 t*2 d k*2 g m*2 n*2 ny ng s z l r h w y j ch sh p f v
+N: m n
+
+V: a*2 e i*2 o u

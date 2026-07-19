@@ -1,0 +1,17 @@
+inflections:
+  PL:
+    # Class 1/2 (People): m- becomes wa-
+    - ["^m(.*)", "wa$1"]
+    # Class 7/8 (Artifacts): ch- becomes vy-
+    - ["^ch(.*)", "vy$1"]
+    # Class 9/10 (Environmental/Abstract): n- becomes ny-
+    - ["^n([^y].*)", "ny$1"]
+  INF:
+    # Infinitive verb prefix ku-
+    - ["^", "ku"]
+  PAST:
+    # Past tense infix -li- (simplified as a prefix here for the example)
+    - ["^", "li"]
+  INTENS:
+    # Intensive verbal extension. Replaces the final vowel 'a' with 'isa'
+    - ["a$", "isa"]
