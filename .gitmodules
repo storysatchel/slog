@@ -1,0 +1,3 @@
+[submodule "tools/audition"]
+	path = tools/audition
+	url = https://github.com/benchristel/audition.git

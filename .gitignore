@@ -1,2 +1,4 @@
 # Audition executable
 au
+node_modules/
+docs/
