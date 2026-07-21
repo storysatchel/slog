@@ -14,6 +14,8 @@ inflections:
     - ["^dura$", "matura"]
     # Class 1a/2a (Healer): nanga becomes vananga
     - ["^nanga$", "vananga"]
+    # Class 3/4 (Missile): museve becomes miseve
+    - ["^museve$", "miseve"]
     # Class 1/2 (People with mu-): mu- becomes va-
     - ["^mu(.*)", "va$1"]
     # Class 1/2 (People): m- becomes wa-
@@ -28,6 +30,8 @@ inflections:
     - ["^ch(.*)", "zv$1"]
     # Class 21 (Augmentatives): zi- becomes ma- (Class 6)
     - ["^zi(.*)", "ma$1"]
+    # Class 9/10 (Commanders): nduna becomes madzinduna
+    - ["^nduna$", "madzinduna"]
     # Class 9/10 (Environmental/Abstract): n- becomes ny-
     - ["^n([^y].*)", "ny$1"]
   INF:
