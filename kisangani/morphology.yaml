@@ -2,6 +2,8 @@ inflections:
   PL:
     # Class 1/2 (People): m- becomes wa-
     - ["^m(.*)", "wa$1"]
+    # Class 5/6 (Stones/Monuments): ji- becomes ma-
+    - ["^ji(.*)", "ma$1"]
     # Class 7/8 (Artifacts): ch- becomes vy-
     - ["^ch(.*)", "vy$1"]
     # Class 9/10 (Environmental/Abstract): n- becomes ny-
@@ -15,3 +17,9 @@ inflections:
   INTENS:
     # Intensive verbal extension. Replaces the final vowel 'a' with 'isa'
     - ["a$", "isa"]
+  REV:
+    # Reversive/Corrective verbal extension. Replaces final 'a' with 'ulula'
+    - ["a$", "ulula"]
+  NEG:
+    # Negative verb prefix ha-
+    - ["^", "ha"]
