@@ -1,3 +1,3 @@
 > __mimi kuliona dhoruba anga.__
 > 
-> __kisukumio pigisa nygao chombonyota.__
+> __kisukumio pigisisa nygao chombonyota.__

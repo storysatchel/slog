@@ -1,5 +1,21 @@
 inflections:
   PL:
+    # Class 3/4 (Habitat): musha becomes misha
+    - ["^musha$", "misha"]
+    # Class 9/10 (House): imba becomes dzimba
+    - ["^imba$", "dzimba"]
+    # Class 3/4 (Field): munda becomes minda
+    - ["^munda$", "minda"]
+    # Class 7/8 (Academy): chikoro becomes zvikoro
+    - ["^chikoro$", "zvikoro"]
+    # Class 5/6 (Medium): svikiro becomes masvikiro
+    - ["^svikiro$", "masvikiro"]
+    # Class 5/6 (Archive): dura becomes matura
+    - ["^dura$", "matura"]
+    # Class 1a/2a (Healer): nanga becomes vananga
+    - ["^nanga$", "vananga"]
+    # Class 1/2 (People with mu-): mu- becomes va-
+    - ["^mu(.*)", "va$1"]
     # Class 1/2 (People): m- becomes wa-
     - ["^m(.*)", "wa$1"]
     # Class 5/6 (Stones/Monuments): ji- becomes ma-
@@ -15,11 +31,57 @@ inflections:
     # Past tense infix -li- (simplified as a prefix here for the example)
     - ["^", "li"]
   INTENS:
-    # Intensive verbal extension. Replaces the final vowel 'a' with 'isa'
-    - ["a$", "isa"]
+    # Intensive verbal extension with vowel harmony
+    - ["([aiu][^aeiou]*)a$", "$1isisa"]
+    - ["([eo][^aeiou]*)a$", "$1esesa"]
   REV:
-    # Reversive/Corrective verbal extension. Replaces final 'a' with 'ulula'
-    - ["a$", "ulula"]
-  NEG:
-    # Negative verb prefix ha-
+    # Reversive/Corrective verbal extension. Replaces final 'a' with 'unura'
+    - ["a$", "unura"]
+  NEG_INF:
+    # Negative marker for infinitive/subjunctive
+    - ["^", "sa"]
+  EVID:
+    # Ancestral Evidential suffix
+    - ["$", "dzimu"]
+  NEG_IND:
+    # Negative pre-initial marker for indicative mood
     - ["^", "ha"]
+  LOC16:
+    # Locative prefix pa-
+    - ["^", "pa"]
+  LOC17:
+    # Locative prefix ku-
+    - ["^", "ku"]
+  LOC18:
+    # Locative prefix mu- (inside)
+    - ["^", "mu"]
+  SP8:
+    # Subject Prefix for Class 8
+    - ["^", "zvi"]
+  SP1PL:
+    # Subject Prefix for 1st person plural (we)
+    - ["^", "tu"]
+  SP2PL:
+    # Subject Prefix for Class 2 (plural humans)
+    - ["^", "va"]
+  SP1:
+    # Subject Prefix for Class 1
+    - ["^", "a"]
+  SP3:
+    # Subject Prefix for Class 3
+    - ["^", "u"]
+  SP9:
+    # Subject Prefix for Class 9
+    - ["^", "i"]
+  SP10:
+    # Subject Prefix for Class 10
+    - ["^", "dzi"]
+  SP14:
+    # Subject Prefix for Class 14
+    - ["^", "u"]
+  PRES:
+    # Present Tense Marker
+    - ["^", "na"]
+  FUT:
+    # Future Tense Marker
+    - ["^", "ta"]

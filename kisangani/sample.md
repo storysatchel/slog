@@ -1,3 +1,3 @@
 > __sisi kulivuka nypepo bahari.__
 > 
-> __nypepo pigisa nygao chombonyota.__
+> __nypepo pigisisa nygao chombonyota.__
