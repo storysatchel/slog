@@ -95,3 +95,7 @@ inflections:
   FUT:
     # Future Tense Marker
     - ["^", "ta"]
+  CL7:
+    - ["^", "ki"]
+  LOC:
+    - ["$", "ni"]
