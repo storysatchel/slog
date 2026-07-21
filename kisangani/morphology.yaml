@@ -20,8 +20,14 @@ inflections:
     - ["^m(.*)", "wa$1"]
     # Class 5/6 (Stones/Monuments): ji- becomes ma-
     - ["^ji(.*)", "ma$1"]
-    # Class 7/8 (Artifacts): ch- becomes vy-
-    - ["^ch(.*)", "vy$1"]
+    # Class 12/13 (Diminutives): ka- becomes tu-
+    - ["^ka(.*)", "tu$1"]
+    # Class 7/8 (Instruments/Things): chi- becomes zvi-
+    - ["^chi(.*)", "zvi$1"]
+    # Class 7/8 (Other Artifacts): ch- becomes zv-
+    - ["^ch(.*)", "zv$1"]
+    # Class 21 (Augmentatives): zi- becomes ma- (Class 6)
+    - ["^zi(.*)", "ma$1"]
     # Class 9/10 (Environmental/Abstract): n- becomes ny-
     - ["^n([^y].*)", "ny$1"]
   INF:
