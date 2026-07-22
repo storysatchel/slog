@@ -226,6 +226,10 @@ inflections:
     - ma$1
   - - ^nduna$
     - vanduna
+  - - ^ishe$
+    - madzishe
+  - - ^bwe$
+    - mabwe
   - - ^n([^y].*)
     - ny$1
   POSS:
@@ -282,6 +286,12 @@ inflections:
   SP9:
   - - ^
     - i
+  SP7:
+  - - ^
+    - chi
+  SP16:
+  - - ^
+    - pa
   CL3:
   - - ^moyo$
     - moyo
