@@ -1,265 +1,291 @@
 inflections:
-  SG:
-    - - ^(kuru|toa)$
-      - mu$1
-  PL:
-    - - ^musha$
-      - misha
-    - - ^imba$
-      - dzimba
-    - - ^munda$
-      - minda
-    - - ^chikoro$
-      - zvikoro
-    - - ^svikiro$
-      - masvikiro
-    - - ^dau(.*)
-      - madau$1
-    - - ^dura$
-      - matura
-    - - ^nanga$
-      - vananga
-    - - ^museve$
-      - miseve
-    - - ^(kuru|toa)$
-      - va$1
-    - - ^mu(.*)
-      - va$1
-    - - ^m(.*)
-      - wa$1
-    - - ^ji(.*)
-      - ma$1
-    - - ^ka(.*)
-      - tu$1
-    - - ^chi(.*)
-      - zvi$1
-    - - ^ch(.*)
-      - zv$1
-    - - ^zi(.*)
-      - ma$1
-    - - ^nduna$
-      - vanduna
-    - - ^n([^y].*)
-      - ny$1
-  PASS:
-    - - (ir|er)a?$
-      - $1w
-    - - ([aiu][^aeiou]*)a?$
-      - $1iw
-    - - ([eo][^aeiou]*)a?$
-      - $1ew
-    - - a?$
-      - w
-  APP:
-    - - ([aiu][^aeiou]*)a$
-      - $1ira
-    - - ([eo][^aeiou]*)a$
-      - $1era
-    - - a$
-      - ira
-  RECIP:
-    - - a$
-      - ana
-  INF:
-    - - ^
-      - ku
-  PAST:
-    - - ^
-      - li
-  CAUS:
-    - - ([aiu][^aeiou]*)a$
-      - $1isa
-    - - ([eo][^aeiou]*)a$
-      - $1esa
-    - - a$
-      - isa
-  INTENS:
-    - - ([aiu][^aeiou]*)a$
-      - $1isa
-    - - ([eo][^aeiou]*)a$
-      - $1esa
-    - - a$
-      - isa
-  REV:
-    - - ([aiu][^aeiou]*)a$
-      - $1unura
-    - - ([eo][^aeiou]*)a$
-      - $1onora
-    - - a$
-      - unura
-  NEG_INF:
-    - - ^
-      - sa
-  EVID:
-    - - $
-      - dzimu
-  NEG_IND:
-    - - ^
-      - ha
-  LOC16:
-    - - ^
-      - pa
-  LOC17:
-    - - ^
-      - ku
-  LOC18:
-    - - ^
-      - mu
-  SP8:
-    - - ^
-      - zvi
-  SP1PL:
-    - - ^
-      - tu
-  SP2PL:
-    - - ^
-      - va
-  SP1:
-    - - ^
-      - a
-  SP3:
-    - - ^
-      - u
-  SP9:
-    - - ^
-      - i
-  SP10:
-    - - ^
-      - dzi
-  SP14:
-    - - ^
-      - u
-  PRES:
-    - - ^
-      - na
-  FUT:
-    - - ^
-      - ta
-  CL14:
-    - - ^jiwe$
-      - ubwe
-    - - ^(.*)$
-      - u$1
-  CL7:
-    - - ^
-      - ki
-  LOC:
-    - - $
-      - ni
-  CL1:
-    - - ^
-      - mu
-  CL2:
-    - - ^
-      - va
-  CL4:
-    - - ^
-      - mi
-  CL5:
-    - - ^
-      - ri
-  CL6:
-    - - ^
-      - ma
-  CL8:
-    - - ^
-      - zvi
-  CL9:
-    - - ^([pbmfv].*)$
-      - m$1
-    - - ^[rl](.*)$
-      - nd$1
-    - - ^([aeiou].*)$
-      - ny$1
-    - - ^(.*)$
-      - n$1
-  CL10:
-    - - ^([pbmfv].*)$
-      - m$1
-    - - ^[rl](.*)$
-      - nd$1
-    - - ^([aeiou].*)$
-      - ny$1
-    - - ^(.*)$
-      - n$1
-  CL11:
-    - - ^
-      - ru
-  CL15:
-    - - ^
-      - ku
-  ASSOC:
-    - - ^
-      - a
-  CL9.ASSOC:
-    - - ^
-      - ya
-  CL10.ASSOC:
-    - - ^
-      - dza
-  CL2.ASSOC:
-    - - ^
-      - va
-  CL4.ASSOC:
-    - - ^
-      - ya
-  CL5.ASSOC:
-    - - ^
-      - ra
-  CL7.ASSOC:
-    - - ^
-      - cha
-  CL15.ASSOC:
-    - - ^
-      - kwa
-  DEM:
-    - - ^
-      - ino
-  POSS:
-    - - ^
-      - angu
-  APPL:
-    - - ([aiu][^aeiou]*)a$
-      - $1ira
-    - - ([eo][^aeiou]*)a$
-      - $1era
-    - - a$
-      - ira
-    - - $
-      - ira
-  FV:
-    - - a$
-      - a
-    - - $
-      - a
-  IMP:
-    - - $
-      - ''
-  PROG:
-    - - ^
-      - 'no'
-  1SG:
-    - - ^
-      - ndi
-  2SG:
-    - - ^
-      - u
   1PL:
-    - - ^
-      - ti
+  - - ^
+    - ti
   1PL.SUBJ:
-    - - ^
-      - ti
+  - - ^
+    - ti
+  1SG:
+  - - ^
+    - ndi
+  2SG:
+  - - ^
+    - u
   3PL.SUBJ:
-    - - ^
-      - va
+  - - ^
+    - va
+  APP:
+  - - ([aiu][^aeiou]*)a$
+    - $1ira
+  - - ([eo][^aeiou]*)a$
+    - $1era
+  - - a$
+    - ira
+  APPL:
+  - - ([aiu][^aeiou]*)a$
+    - $1ira
+  - - ([eo][^aeiou]*)a$
+    - $1era
+  - - a$
+    - ira
+  - - $
+    - ira
+  ASSOC:
+  - - ^
+    - re
+  CAUS:
+  - - ([aiu][^aeiou]*)a$
+    - $1isa
+  - - ([eo][^aeiou]*)a$
+    - $1esa
+  - - a$
+    - isa
+  CL1:
+  - - ^
+    - mu
+  CL10:
+  - - ^([pbmfv].*)$
+    - m$1
+  - - ^[rl](.*)$
+    - nd$1
+  - - ^([aeiou].*)$
+    - ny$1
+  - - ^(.*)$
+    - n$1
+  CL10.ASSOC:
+  - - ^
+    - dza
+  CL11:
+  - - ^
+    - ru
+  CL14:
+  - - ^jiwe$
+    - ubwe
+  - - ^(.*)$
+    - u$1
+  CL15:
+  - - ^
+    - ku
+  CL15.ASSOC:
+  - - ^
+    - kwa
+  CL2:
+  - - ^
+    - va
+  CL2.ASSOC:
+  - - ^
+    - va
+  CL2A:
+  - - ^
+    - va
+  CL4:
+  - - ^
+    - mi
+  CL4.ASSOC:
+  - - ^
+    - ya
+  CL5.ASSOC:
+  - - ^
+    - re
+  CL5:
+  - - ^ganda$
+    - ganda
+  - - ^ganda$
+    - ganda
+  - - ^
+    - ri
+  CL6:
+  - - ^gonhi$
+    - magonhi
+  - - ^
+    - ma
+  CL7:
+  - - ^
+    - ki
+  CL7.ASSOC:
+  - - ^
+    - cha
+  CL8:
+  - - ^
+    - zvi
+  CL9:
+  - - ^([pbmfv].*)$
+    - m$1
+  - - ^[rl](.*)$
+    - nd$1
+  - - ^([aeiou].*)$
+    - ny$1
+  - - ^(.*)$
+    - n$1
+  CL9.ASSOC:
+  - - ^
+    - ya
+  DEM:
+  - - ^
+    - ino
+  EVID:
+  - - $
+    - dzimu
+  FUT:
+  - - ^
+    - ta
+  FV:
+  - - a$
+    - a
+  - - $
+    - a
   FV.ANIM:
-    - - a$
-      - i
-    - - $
-      - i
+  - - a$
+    - i
+  - - $
+    - i
   FV.INAM:
-    - - a$
-      - o
-    - - $
-      - o
+  - - a$
+    - o
+  - - $
+    - o
+  IMP:
+  - - $
+    - ''
+  INF:
+  - - ^
+    - ku
+  INTENS:
+  - - ([aiu][^aeiou]*)a?$
+    - $1is
+  - - ([eo][^aeiou]*)a?$
+    - $1es
+  - - a?$
+    - is
+  LOC:
+  - - $
+    - ni
+  LOC16:
+  - - ^
+    - pa
+  LOC17:
+  - - ^
+    - ku
+  LOC18:
+  - - ^
+    - mu
+  NEG_IND:
+  - - ^
+    - ha
+  NEG_INF:
+  - - ^
+    - sa
+  PASS:
+  - - (ir|er)a?$
+    - $1w
+  - - ([aiu][^aeiou]*)a?$
+    - $1iw
+  - - ([eo][^aeiou]*)a?$
+    - $1ew
+  - - a?$
+    - w
+  PAST:
+  - - ^
+    - li
+  PL:
+  - - ^musha$
+    - misha
+  - - ^imba$
+    - dzimba
+  - - ^munda$
+    - minda
+  - - ^chikoro$
+    - zvikoro
+  - - ^svikiro$
+    - masvikiro
+  - - ^dau(.*)
+    - madau$1
+  - - ^dura$
+    - matura
+  - - ^nanga$
+    - vananga
+  - - ^museve$
+    - miseve
+  - - ^(kuru|toa)$
+    - va$1
+  - - ^mu(.*)
+    - va$1
+  - - ^m(.*)
+    - wa$1
+  - - ^ji(.*)
+    - ma$1
+  - - ^ka(.*)
+    - tu$1
+  - - ^chi(.*)
+    - zvi$1
+  - - ^ch(.*)
+    - zv$1
+  - - ^zi(.*)
+    - ma$1
+  - - ^nduna$
+    - vanduna
+  - - ^n([^y].*)
+    - ny$1
+  POSS:
+  - - ^
+    - angu
+  PRES:
+  - - ^
+    - na
+  PROG:
+  - - ^
+    - 'no'
+  RECIP:
+  - - a$
+    - ana
+  REV:
+  - - ([aiu][^aeiou]*)a$
+    - $1unura
+  - - ([eo][^aeiou]*)a$
+    - $1onora
+  - - a$
+    - unura
+  SG:
+  - - ^(kuru|toa)$
+    - mu$1
+  SP1:
+  - - ^
+    - a
+  SP10:
+  - - ^
+    - dzi
+  SP14:
+  - - ^
+    - u
+  SP1PL:
+  - - ^
+    - ti
+  SP1SG:
+  - - ^
+    - ndi
+  SP2:
+  - - ^
+    - va
+  SP2PL:
+  - - ^
+    - va
+  SP3:
+  - - ^
+    - u
+  SP8:
+  - - ^
+    - zvi
+  SP9:
+  - - ^
+    - i
+  CL3:
+  - - ^moyo$
+    - moyo
+  VERB.INTR:
+  - - $
+    - k
+compound:
+- - a$
+  - ^u
+  - o
+  - ''
