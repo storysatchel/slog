@@ -42,14 +42,14 @@ inflections:
     - - ^n([^y].*)
       - ny$1
   PASS:
-    - - (ir|er)a$
-      - $1wa
-    - - ([aiu][^aeiou]*)a$
-      - $1iwa
-    - - ([eo][^aeiou]*)a$
-      - $1ewa
-    - - a$
-      - wa
+    - - (ir|er)a?$
+      - $1w
+    - - ([aiu][^aeiou]*)a?$
+      - $1iw
+    - - ([eo][^aeiou]*)a?$
+      - $1ew
+    - - a?$
+      - w
   APP:
     - - ([aiu][^aeiou]*)a$
       - $1ira
