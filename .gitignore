@@ -2,3 +2,12 @@
 au
 node_modules/
 docs/
+
+# Audition generated markdown files
+sample.md
+src/**/*.md
+tools/audition/test-language/*.md
+
+# Ensure wiki is explicitly tracked
+!wiki/
+!wiki/**/*.md

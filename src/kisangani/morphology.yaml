@@ -1,4 +1,7 @@
 inflections:
+  SG:
+    # Singular for human stems (kuru, toa, etc.)
+    - ["^(kuru|toa)$", "mu$1"]
   PL:
     # Class 3/4 (Habitat): musha becomes misha
     - ["^musha$", "misha"]
@@ -10,12 +13,16 @@ inflections:
     - ["^chikoro$", "zvikoro"]
     # Class 5/6 (Medium): svikiro becomes masvikiro
     - ["^svikiro$", "masvikiro"]
+    # Class 5/6 (Dhow/Vessel): dau becomes madau
+    - ["^dau(.*)", "madau$1"]
     # Class 5/6 (Archive): dura becomes matura
     - ["^dura$", "matura"]
     # Class 1a/2a (Healer): nanga becomes vananga
     - ["^nanga$", "vananga"]
     # Class 3/4 (Missile): museve becomes miseve
     - ["^museve$", "miseve"]
+    # Human stems that require va- for plural (kuru -> vakuru, toa -> vatoa)
+    - ["^(kuru|toa)$", "va$1"]
     # Class 1/2 (People with mu-): mu- becomes va-
     - ["^mu(.*)", "va$1"]
     # Class 1/2 (People): m- becomes wa-
@@ -30,23 +37,45 @@ inflections:
     - ["^ch(.*)", "zv$1"]
     # Class 21 (Augmentatives): zi- becomes ma- (Class 6)
     - ["^zi(.*)", "ma$1"]
-    # Class 9/10 (Commanders): nduna becomes madzinduna
-    - ["^nduna$", "madzinduna"]
+    # Class 9/10 (Commanders): nduna becomes vanduna
+    - ["^nduna$", "vanduna"]
     # Class 9/10 (Environmental/Abstract): n- becomes ny-
     - ["^n([^y].*)", "ny$1"]
+  PASS:
+    # Passive verbal extension with vowel harmony and extension contraction
+    - ["(ir|er)a$", "$1wa"] # applied passive contraction (e.g., torerwa)
+    - ["([aiu][^aeiou]*)a$", "$1iwa"] # /a, i, u/ take -iwa
+    - ["([eo][^aeiou]*)a$", "$1ewa"]  # /e, o/ take -ewa
+    - ["a$", "wa"]                    # Default/vowel-final take -wa
+  APP:
+    # Applied verbal extension with vowel harmony (-ira/-era)
+    - ["([aiu][^aeiou]*)a$", "$1ira"]
+    - ["([eo][^aeiou]*)a$", "$1era"]
+    - ["a$", "ira"]
+  RECIP:
+    # Reciprocal verbal extension
+    - ["a$", "ana"]
   INF:
     # Infinitive verb prefix ku-
     - ["^", "ku"]
   PAST:
     # Past tense infix -li- (simplified as a prefix here for the example)
     - ["^", "li"]
+  CAUS:
+    # Causative verbal extension with vowel harmony (-isa/-esa)
+    - ["([aiu][^aeiou]*)a$", "$1isa"]
+    - ["([eo][^aeiou]*)a$", "$1esa"]
+    - ["a$", "isa"]
   INTENS:
-    # Intensive verbal extension with vowel harmony
-    - ["([aiu][^aeiou]*)a$", "$1isisa"]
-    - ["([eo][^aeiou]*)a$", "$1esesa"]
+    # Intensive verbal extension with vowel harmony (-isa/-esa)
+    - ["([aiu][^aeiou]*)a$", "$1isa"]
+    - ["([eo][^aeiou]*)a$", "$1esa"]
+    - ["a$", "isa"]
   REV:
-    # Reversive/Corrective verbal extension. Replaces final 'a' with 'unura'
-    - ["a$", "unura"]
+    # Reversive verbal extension with vowel harmony
+    - ["([aiu][^aeiou]*)a$", "$1unura"] # /a, i, u/ take -unura
+    - ["([eo][^aeiou]*)a$", "$1onora"]  # /e, o/ take -onora
+    - ["a$", "unura"]                   # Default fallback
   NEG_INF:
     # Negative marker for infinitive/subjunctive
     - ["^", "sa"]
@@ -95,6 +124,10 @@ inflections:
   FUT:
     # Future Tense Marker
     - ["^", "ta"]
+  CL14:
+    # Abstract noun class prefix (u-/bu-/hu-)
+    - ["^jiwe$", "ubwe"]
+    - ["^(.*)$", "u$1"]
   CL7:
     - ["^", "ki"]
   LOC:

@@ -1,0 +1,25 @@
+---
+title: Hot Cache
+updated: 2026-07-22T22:00:10Z
+---
+
+# Hot Cache
+
+*A ~500-word semantic snapshot of recent activity. Updated after every major write operation.*
+
+## Recent Activity
+- `/wiki-capture` used to document Expanse signage guidelines and Xi-Mallow 434 lore constraints, distinguishing between UNN quarantine markings and ancient Martian sigils.
+- `/wiki-capture` used to preserve knowledge on Shona Verbal Extension Stacking, outlining left-to-right evaluation, vowel harmony across complex tags (Causative, Applied, Reciprocal, Passive), and semantic safeguarding via lexicon flags.
+- [2026-07-22T14:56:00Z] INIT — vault created at /home/user/Documents/SLOG/wiki
+
+## Active Threads
+
+*None yet — start ingesting sources to populate.*
+
+## Key Takeaways
+
+*None yet.*
+
+## Flagged Contradictions
+
+*None yet.*

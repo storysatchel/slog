@@ -1,0 +1,5 @@
+inflections:
+  1SG:
+    - ["o([^aeiouy])$", "e$1in"]
+  INF:
+    - ["$", "ed"]

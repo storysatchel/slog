@@ -4,12 +4,14 @@
   "description": "A conlang, built with Audition and presented as a website with mdsite",
   "scripts": {
     "build": "make build",
-    "serve": "make serve"
+    "serve": "make serve",
+    "watch": "nodemon -e au,csv,yaml,txt -w src -w tools -x 'make build'"
   },
   "devDependencies": {
     "@benchristel/mdsite": "0.9.0",
     "@benchristel/taste": "0.5.0",
     "http-server": "^14.1.1",
+    "nodemon": "^3.1.14",
     "yaml": "^2.1.3"
   }
 }

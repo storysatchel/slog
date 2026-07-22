@@ -1,0 +1,14 @@
+root:
+[syl]
+[syl][syl]*2
+[syl][syl][syl]
+
+syl:
+[C][V]*4
+[C][V][C]
+[V][C]*0.7
+[V]*0.2
+
+C: t*3 p k*2 n*3 l*2 r s*2 h
+
+V: a*1.3 i u

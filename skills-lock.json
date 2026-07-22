@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "story-consistency-monitor": {
+      "source": "wordflowlab/novel-writer-skills",
+      "sourceType": "github",
+      "skillPath": "templates/skills/quality-assurance/consistency-checker/SKILL.md",
+      "computedHash": "3f5338f0dfb2182a1a34624125e7bb521d331d4abf943ab469eabbeb07142bd0"
+    }
+  }
+}
