@@ -18,5 +18,6 @@ title: Wiki Index
 
 ## Synthesis
 - [[synthesis/expanse-diegetic-signage-and-lore]] — Expanse Diegetic Signage and Xi-Mallow 434 Lore Constraints
+- [[synthesis/audition-compiler-morphology-workarounds]] — Audition Compiler Morphology Bug and Tag Adjustments
 
 ## Journal

@@ -52,7 +52,7 @@ inflections:
     - ny$1
   - - ^(.*)$
     - n$1
-  CL10.ASSOC:
+  CL10ASSOC:
   - - ^
     - dza
   CL11:
@@ -66,13 +66,13 @@ inflections:
   CL15:
   - - ^
     - ku
-  CL15.ASSOC:
+  CL15ASSOC:
   - - ^
     - kwa
   CL2:
   - - ^
     - va
-  CL2.ASSOC:
+  CL2ASSOC:
   - - ^
     - va
   CL2A:
@@ -81,10 +81,10 @@ inflections:
   CL4:
   - - ^
     - mi
-  CL4.ASSOC:
+  CL4ASSOC:
   - - ^
     - ya
-  CL5.ASSOC:
+  CL5ASSOC:
   - - ^
     - re
   CL5:
@@ -102,7 +102,7 @@ inflections:
   CL7:
   - - ^
     - ki
-  CL7.ASSOC:
+  CL7ASSOC:
   - - ^
     - cha
   CL8:
@@ -117,7 +117,7 @@ inflections:
     - ny$1
   - - ^(.*)$
     - n$1
-  CL9.ASSOC:
+  CL9ASSOC:
   - - ^
     - ya
   DEM:
@@ -139,7 +139,7 @@ inflections:
     - i
   - - $
     - i
-  FV.INAM:
+  FV_INAM:
   - - a$
     - o
   - - $
@@ -161,6 +161,8 @@ inflections:
   - - $
     - ni
   LOC16:
+  - - ^u
+    - po
   - - ^
     - pa
   LOC17:
@@ -238,6 +240,8 @@ inflections:
   RECIP:
   - - a$
     - ana
+  - - $
+    - ana
   REV:
   - - ([aiu][^aeiou]*)a$
     - $1unura
@@ -281,11 +285,12 @@ inflections:
   CL3:
   - - ^moyo$
     - moyo
-  VERB.INTR:
+  VERB_INTR:
   - - $
     - k
-compound:
-- - a$
-  - ^u
-  - o
-  - ''
+  TM:
+  - - ^
+    - 'no'
+  FVSUBJ:
+  - - a?$
+    - e
