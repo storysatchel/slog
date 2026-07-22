@@ -4,6 +4,8 @@ This repository contains constructed languages (conlangs) for the *Humanity's Sl
 
 The languages are built and managed using the [Audition](https://github.com/gavmor/audition) conlang build tool. 
 
+> **Note for AI Agents:** Please read [AGENTS.md](AGENTS.md) for strict instructions on the translation workflow and directory structures.
+
 ## Developed Languages
 * **Kisangani Basic** (`/kisangani`): The official language of the Federated States of Kisangani. It is a Bantu-inspired, agglutinative language featuring a robust noun-class system and intensive verbal extensions, designed to culturally resurrect the African historiography of its founders and describe their harsh oceanic planetary environment.
 

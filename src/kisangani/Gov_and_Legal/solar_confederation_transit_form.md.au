@@ -1,52 +1,29 @@
-> __department#CL9 CL9ASSOC transit#CL9 CL9ASSOC confederation#CL9 solar#CL9__
-# Solar Confederation Department of Transit
-> __form#CL9 administrative#CL9 public#CL9 44B__
-## Public Administrative Form 44-B
-> __application#CL9 CL9ASSOC relocation#CL9 civilian#CL9 interplanetary#CL9__
-### Application for Interplanetary Civilian Relocation
+> # __department#CL9 CL9ASSOC transit#CL9 CL9ASSOC confederation#CL9 solar#CL9__
+> ## __form#CL9 administrative#CL9 public#CL9 44B__
+> ### __application#CL9 CL9ASSOC relocation#CL9 civilian#CL9 interplanetary#CL9__
 
 > __CL9ID CL9ASSOC form#CL9 SC44B9982__
-**Form ID:** SC-44B-9982
 > __fee#CL9 CL9ASSOC process#CL15 credit#CL10 500__
-**Processing Fee:** 500 Credits
 
-> __part#CL7 A information#CL9 CL9ASSOC applicant#CL1__
-**Part A: Applicant Information**
-> __ name#CL5 legal#CL5 full#CL5 __
-- Full Legal Name: _________________
-> __ origin#CL9 planetary#CL9 __
-- Planetary Origin: _________________
-> __ number#CL5 CL5ASSOC CL9ID CL9ASSOC confederation#CL9 __
-- Confederation ID Number: _________________
+> **__part#CL7 A information#CL9 CL9ASSOC applicant#CL1__**
+> - __ name#CL5 legal#CL5 full#CL5 __
+> - __ origin#CL9 planetary#CL9 __
+> - __ number#CL5 CL5ASSOC CL9ID CL9ASSOC confederation#CL9 __
 
-> __part#CL7 B detail#CL10 CL10ASSOC relocation#CL9__
-**Part B: Relocation Details**
-> __ habitat#CL9 CL9ASSOC destination#CL9 __
-- Destination Planet/Habitat: _________________
-> __ purpose#CL9 primary#CL9 CL9ASSOC relocation#CL9 IMPcheck one#CL7__
-- Primary Purpose of Relocation (Check one):
+> **__part#CL7 B detail#CL10 CL10ASSOC relocation#CL9__**
+> - __ habitat#CL9 CL9ASSOC destination#CL9 __
+> - __ purpose#CL9 primary#CL9 CL9ASSOC relocation#CL9 IMPcheck one#CL7__
 > __  contract#CL9 CL9ASSOC employment#CL9__
-  [ ] Employment Contract
 > __  reunification#CL9 CL9ASSOC family#CL9__
-  [ ] Family Reunification
 > __  placement#CL9 educational#CL9__
-  [ ] Educational Placement
 > __  settlement#CL9 general#CL9__
-  [ ] General Settlement
 
-> __part#CL7 C clearance#CL9 medical#CL9__
-**Part C: Medical Clearance**
-> __ proof#CL9 CL9ASSOC therapy#CL9 CL9ASSOC adaptation#CL9 CL9ASSOC gravity#CL9 standard#CL9 YesNo __
-- Proof of standard gravity adaptation therapy (Yes/No): ______
-> __ certification#CL9 CL9ASSOC tolerance#CL9 CL9ASSOC exposure#CL9 CL9ASSOC radiation#CL9 YesNo __
-- Certification of radiation exposure tolerance (Yes/No): ______
+> **__part#CL7 C clearance#CL9 medical#CL9__**
+> - __ proof#CL9 CL9ASSOC therapy#CL9 CL9ASSOC adaptation#CL9 CL9ASSOC gravity#CL9 standard#CL9 YesNo __
+> - __ certification#CL9 CL9ASSOC tolerance#CL9 CL9ASSOC exposure#CL9 CL9ASSOC radiation#CL9 YesNo __
 
-> __part#CL7 D declaration#CL10__
-**Part D: Declarations**
+> **__part#CL7 D declaration#CL10__**
 > __PRO.1SG hereby#CL9 declare#1SG#FV COMP information#CL9 provide#CL9#PASS#PST be#CL9 accurate#CL9 CONJ COMP PRO.1SG submit#1SG#FV to#CL17 jurisdiction#CL9 all#CL9 CONJ law#CL10 CL10ASSOC confederation#CL9 solar#CL9 during#CL18 transit#CL9 CL9POSS.1SG CONJ upon#CL16 arrival#CL9 at#CL16 destination#CL9 CL9POSS.1SG.__
-I hereby declare that the information provided is accurate and that I submit to all jurisdiction and laws of the Solar Confederation during my transit and upon arrival at my destination.
 
 > __signature#CL9 __
-Signature: _________________
 > __date#CL9 __
-Date: _________________
