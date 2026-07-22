@@ -1,0 +1,19 @@
+> __vessel#CL9 storage#CL9.ASSOC ceramic#CL9.ASSOC primary  open#NEG#IMP__
+# PRIMARY CERAMIC STORAGE VESSEL - DO NOT OPEN
+> __material#CL8 hazard.bio#CL8 enclosed__
+## BIO-HAZARDOUS MATERIAL ENCLOSED
+
+> __warning#CL14 compromise#CL9 structure#CL9.ASSOC FUT lead LOC contamination#CL9 immediate#CL9 catastrophe#CL9__
+**WARNING: STRUCTURAL COMPROMISE MAY LEAD TO IMMEDIATE CATASTROPHIC CONTAMINATION.**
+
+> __ expose#NEG#IMP LOC shock#CL9 thermal#CL9.ASSOC extreme.#CL9__
+- Do not expose to extreme thermal shock.
+> __ handle#IMP INS grapple#CL10 magnetic#CL10.ASSOC designated only.__
+- Handle with designated magnetic grapples only.
+> __ LOC case#CL9 fracture#CL9.ASSOC initiate#IMP protocol#CL10 incineration#CL10.ASSOC sitewide immediate.__
+- In case of fracture, initiate immediate site-wide incineration protocols.
+
+> __property#CL9 CL9.ASSOC directorate#CL9 research#CL9.ASSOC Martian.__
+Property of the Martian Research Directorate.
+
+*(To be accompanied by the traditional silver and blue circle-and-arrow symbol for Mars and relevant Chinese ideograms)*
