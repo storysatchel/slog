@@ -48,6 +48,11 @@ inflections:
   ASSOC:
   - - ^
     - re
+  WITH:
+  - - ^mu(.*)
+    - ne$1
+  - - ^
+    - na
   CAUS:
   - - ([aiu][^aeiou]*)a$
     - $1isa
@@ -73,6 +78,8 @@ inflections:
   - - ^
     - dza
   CL11:
+  - - ^ru(.*)
+    - ru$1
   - - ^
     - ru
   CL14:
