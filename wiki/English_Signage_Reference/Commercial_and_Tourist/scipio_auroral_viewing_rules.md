@@ -6,4 +6,4 @@ Welcome to the Scipio Ice Flats! For your safety and the preservation of our nat
 2. **No Flash Photography:** Artificial bright lights disrupt the native crystal-fauna. Please disable all auto-flashes on your optical devices.
 3. **Silence Comms:** Keep local frequencies clear. Enjoy the natural hum of the auroral magnetic fields.
 
-*Violators will have their observatory passes revoked and face a minimum fine of 500 Credits.*
+*Violators will have their permission severed and shall present themselves before the council adjudicator.*
