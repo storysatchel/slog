@@ -32,7 +32,7 @@ jobs:
           cache: npm
 
       - name: Build conlang and site
-        run: make build
+        run: make audio
 
       - uses: actions/configure-pages@v6
 
