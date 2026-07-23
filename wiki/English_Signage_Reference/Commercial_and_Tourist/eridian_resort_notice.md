@@ -1,9 +1,9 @@
-# WELCOME TO THE AZURE SEAS RESORT
+# WELCOME TO THE GREAT WATERS SANCTUARY
 
-**Off-Worlder Currency Exchange**
-We happily accept UN Dollars, Scipian Heatstamps, and Lotannian Shiners. Exchange kiosks are located in the main lobby next to the gravity-pool.
+**Off-Worlder Asset Mediation**
+We gladly facilitate mutual exchange of Solar Confederation Credits, Scipian Heatstamps, and Lotannian Shiners. Mediation kiosks are located in the central dare (council chamber) next to the gravity-pool.
 
-**Translation Services**
-Need help communicating with the local merchants? Our concierge offers complimentary neuro-link translation earpieces for the duration of your stay.
+**Linguistic Alignment Services**
+Need help establishing deep understanding with local merchants? Our cultural guide provides complimentary neuro-link translation instruments for the duration of your stay.
 
-*Experience the luxury of the stars.*
+*Experience the sacred richness of the stars.*

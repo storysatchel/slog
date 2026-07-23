@@ -17,6 +17,15 @@ inflections:
   3PL.SUBJ:
   - - ^
     - va
+  3SG:
+  - - ^
+    - u
+  ADV:
+  - - ^
+    - ku
+  BEN:
+  - - ^
+    - ku
   SUBJ:
   - - ^
     - ''

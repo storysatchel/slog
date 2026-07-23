@@ -44,6 +44,41 @@ When writing or editing .au files, you must use the IR syntax to tell Audition h
 \> \_\_Im Arwen. Telin le thaed.\_\_  
 \> "I am Arwen. I've come to help you."
 
+## **Compiler Error State Syntax**
+
+When the Audition conlang compiler encounters a source gloss (`.md.au`) containing unmapped roots, invalid morphology tags, or unbound concords, it falls back to explicit diagnostic annotations rather than crashing. These error signatures reveal precisely where the compiler's pipeline failed to synthesize the target language.
+
+### **Key Error Patterns & Anatomy**
+
+#### **1. Bare Unresolved Keys: `(KEY??)`**
+* **Examples**: `(LOC??)`, `(DEF??)`, `(AZURE??)`, `(SEAS??)`, `(accept??)`
+* **Meaning**: Missing Lexicon Entry / Tag Definition.
+* **Diagnosis**: The term inside the double question marks exists in the source `.md.au` text, but has no corresponding definition in `lexicon.csv` or `morphology.yaml`. The compiler wraps the literal English key in `(...)` as a fallback placeholder.
+
+#### **2. Affixed Missing Radicals: `prefix(KEY??)`**
+* **Examples**: `ku(welcome??)`, `ki(resort??)`, `n(money??)`, `ri(exchange??)`
+* **Meaning**: Morphology Engine Succeeded, Root Engine Failed.
+* **Diagnosis**: The morphology engine successfully recognized and applied the Bantu noun-class or verbal prefix (e.g., Class 15 Infinitive `ku-`, Class 7 `ki-`, Class 9 Nasal `n-`, Class 5 `ri-`), but because the core radical (`welcome`, `resort`, `money`) was missing from the lexicon, it glued the compiled prefix onto the diagnostic fallback wrapper.
+
+#### **3. Stacked / Unbound Morphosyntactic Tags: `((TAG??)#EXT??)`**
+* **Examples**: `tifara.((SUBJ??)#ADV??)`, `((offer??)#3SG??).(SUBJ??)`
+* **Meaning**: Morphological Tag Evaluation Collision.
+* **Diagnosis**: Occurs when multi-tag stacks (e.g. `#1PL.SUBJ#ADV` or `#3SG.SUBJ`) fail to map cleanly to a single affixing rule in `morphology.yaml`. The compiler outputs the successfully compiled root (`tifara`), followed by the unparsed or conflicting tags in nested parenthetical blocks.
+
+#### **4. Unbound Concord Suffixes & Floating Clitics: `.class(??)`**
+* **Examples**: `.ma(??)`, `gara.ri(??)`
+* **Meaning**: Failed Syntactic Agreement / Concord Binding.
+* **Diagnosis**: The engine attempted to generate Bantu noun-class concord agreement (such as Class 6 `ma-` or Class 5 `ri-` agreement), but lost the syntactic context of the governing head noun, leaving a dangling agreement suffix at the boundary.
+
+### **Summary Table**
+
+| Syntax Pattern | Meaning | Root Cause |
+|---|---|---|
+| `(term??)` | Bare fallback | Missing entry in `lexicon.csv` |
+| `prefix(term??)` | Hybrid affixation | Prefix rule matched, but root is missing |
+| `root.((TAG??))` | Unresolved tag stack | Missing/malformed rule in `morphology.yaml` |
+| `root.clitic(??)` | Unbound agreement | Syntactic head noun missing or misaligned |
+
 ## **Workflow & Execution**
 
 When asked to update the conlang or translate text, follow this workflow:
