@@ -66,6 +66,8 @@ inflections:
   CL10:
   - - ^([kmz].*)$
     - $1
+  - - ^n(.*)$
+    - n$1
   - - ^([pbmfv].*)$
     - m$1
   - - ^[rl](.*)$
@@ -87,6 +89,10 @@ inflections:
     - ubwe
   - - ^(.*)$
     - u$1
+  CL14ASSOC:
+  - - ^
+    - hwe
+
   CL15:
   - - ^
     - ku
@@ -334,6 +340,10 @@ inflections:
   SP3:
   - - ^
     - u
+  SP5:
+  - - ^
+    - ri
+
   SP8:
   - - ^
     - zvi
