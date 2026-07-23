@@ -1,12 +1,12 @@
-# LOTANNIA GRAND PAVILION: VISITOR WAYFINDING
+# LOTANNIAN GREAT HOUSE: GUEST GUIDANCE
 
-← **Star-Chaser Rollercoaster**
-*Experience the galaxy's fastest zero-G drop!*
+← **Hunter of Stars**
+*Experience the galaxy's fastest suspended descent!*
 
-**Cosmic Canopy Food Court** →
+**Roof of Stars Food Court** →
 *Featuring delicacies from across the Eridian Sector.*
 
-↑ **Observation Deck & Guest Services**
-*Lost children, holopad rentals, and panoramic views.*
+↑ **Elevated Viewing Platform & Guest Services**
+*Lost children, shadow-database access, and panoramic views.*
 
-**CAUTION:** Please keep all appendages inside the hover-trams at all times.
+**CAUTION:** Please keep all appendages inside the technological vessels at all times.

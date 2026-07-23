@@ -18,6 +18,7 @@ To translate a text into one of the constructed languages, create an Audition so
    - **Never** add phoneticized loanword ciphers or English epenthesis fallbacks. If a term is missing, map it to an authentic root or relational concept in the target language.
 2. **Audition Tag Syntax**:
    - **Always** use `#` delimiters for multi-tag stacks (e.g., `> __welcome_receive#CL15#PASS LOC16__` or `#1PL#SUBJ#ADV`). Do **not** use periods (`.`) or spaces within tag strings in `.md.au` files.
+   - **No Markdown Characters inside Gloss Blocks**: Never place standard markdown brackets `[` `]` or asterisks `*` inside the `__ __` gloss tags (e.g. `__[ chiziviso ]__` will break the parser). Always place formatting characters outside the block: `**[ __chiziviso__ ]**`.
 3. **Noun Class & Prefix Handling in `morphology.yaml`**:
    - Prevent double-prefixing by writing regex rules in `morphology.yaml` that detect existing initial consonants/prefixes before prepending.
 

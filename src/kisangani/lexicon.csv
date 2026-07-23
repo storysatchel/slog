@@ -404,8 +404,8 @@ ready,gadzirira,,diplomacy_trade
 active,shanda,,diplomacy_trade
 end,gumo,,diplomacy_trade
 biosphere,nyika,,diplomacy_trade
-lose,tsakatik,,
-zero_g,yangarar,,
+lose,tsakatika,,
+zero_g,yangarara,,
 visitor,enzi,,
 child,ana,,
 time,nguva,,
@@ -413,7 +413,7 @@ caution,yambiro,,
 guidance,ndungamiro,,
 chaser,vhimi,,
 descent,donho,,
-suspended,yangarar,,
+suspended,yangarara,,
 fastest,kasira,,
 platform,kuva,,
 holopad,zivo,,

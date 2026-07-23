@@ -100,6 +100,8 @@ inflections:
   - - ^
     - kwa
   CL2:
+  - - ^ana$
+    - vana
   - - ^
     - va
   CL2ASSOC:
@@ -147,11 +149,19 @@ inflections:
   - - ^
     - zvi
   CL9:
+  - - ^(imba)$
+    - $1
+  - - ^(ndungamiro)$
+    - $1
+  - - ^(yambiro)$
+    - $1
   - - ^([kmz].*)$
     - $1
   - - ^(dz.*)$
     - $1
   - - ^([bmfv].*)$
+    - $1
+  - - ^([hH].*)$
     - $1
   - - ^p(.*)$
     - m$1
