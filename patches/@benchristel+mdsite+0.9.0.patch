@@ -1,0 +1,15 @@
+diff --git a/node_modules/@benchristel/mdsite/dist/domain/files/templatized-html-file.js b/node_modules/@benchristel/mdsite/dist/domain/files/templatized-html-file.js
+index c08314f..a494c25 100644
+--- a/node_modules/@benchristel/mdsite/dist/domain/files/templatized-html-file.js
++++ b/node_modules/@benchristel/mdsite/dist/domain/files/templatized-html-file.js
+@@ -30,7 +30,9 @@ export class TemplatizedHtmlFile {
+     }
+     getTitle() {
+         const $ = cheerio.load(this.rawHtml);
+-        return text($("h1").slice(0, 1)) || this.defaultTitleFromPath();
++        const $h1 = $("h1").slice(0, 1).clone();
++        $h1.find("x-src").remove();
++        return text($h1) || this.defaultTitleFromPath();
+     }
+     defaultTitleFromPath() {
+         const path = this.outputPath;
