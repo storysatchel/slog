@@ -129,6 +129,8 @@ inflections:
   - - ^
     - cha
   CL8:
+  - - ^(ch|k|chi|ki)(.*)
+    - zv$2
   - - ^
     - zvi
   CL9:
