@@ -6,6 +6,7 @@ docs/
 # Audition generated markdown files
 sample.md
 src/**/*.md
+!src/**/AGENTS.md
 tools/audition/test-language/*.md
 
 # Ensure wiki is explicitly tracked

@@ -7,26 +7,23 @@ New top-level English-language or non-diegetic texts (e.g., signage, forms, narr
 **Never** write `.md.au` files into the `wiki/` directory.
 
 ## 2. Gloss into the Conlang Source Directory
-To translate a text into one of the constructed languages (e.g., Kisangani Basic), create an Audition source file (`.md.au`) in the corresponding `src/[lang]/` directory (e.g., `src/kisangani/Hazard_Markings/`).
+To translate a text into one of the constructed languages, create an Audition source file (`.md.au`) in the corresponding `src/[lang]/` directory (e.g., `src/[lang]/Hazard_Markings/`).
 - Copy the English text from the `wiki/` file into the new `.md.au` file.
 - Add the `> __gloss#TAGS__` syntax blocks directly above the English text using the specific conlang's roots and morphological tags from its `lexicon.csv` and `morphology.yaml`.
 - Respect the specific linguistic ontology and phonotactics of the target language. Do not apply Western inflectional logic to non-Western languages.
 
-### Crucial Lexicography & Decolonial Rules
+### General Lexicography & Tag Syntax Rules
 1. **Column 1 in `lexicon.csv` Must Be Pure English Gloss Keys**:
-   - Column 1 of `lexicon.csv` contains English-language gloss keys (e.g. `sanctuary`, `adjudicator`, `permission`), while Column 2 contains authentic indigenous roots (`uzororo`, `mutongi`, `ruvhumo`).
-   - **Never** add phoneticized loanword ciphers ("Shinglish" epenthesis like `accept,akikepiti` or `dollar,dolilari`). If a term is missing, map it to an authentic root or relational concept.
-2. **Decolonial Narrative Alignment**:
-   - Kisangani Basic acts as a sovereign linguistic shield against Eurocentric corporate/capitalist administrative logic.
-   - Replace neoliberal penal terms ("fines", "credits", "passes", "concierge", "resort") with relational governance, restorative justice, and indigenous space concepts (`dare`, `mutongi`, `ruvhumo`, `uzororo`, `zikirediti`).
-3. **Audition Tag Syntax**:
+   - Column 1 of `lexicon.csv` contains English-language gloss keys (e.g., `sanctuary`, `adjudicator`, `permission`), while Column 2 contains authentic target language roots.
+   - **Never** add phoneticized loanword ciphers or English epenthesis fallbacks. If a term is missing, map it to an authentic root or relational concept in the target language.
+2. **Audition Tag Syntax**:
    - **Always** use `#` delimiters for multi-tag stacks (e.g., `> __welcome_receive#CL15#PASS LOC16__` or `#1PL#SUBJ#ADV`). Do **not** use periods (`.`) or spaces within tag strings in `.md.au` files.
-4. **Noun Class & Prefix Handling in `morphology.yaml`**:
-   - Prevent double-prefixing by writing regex rules in `morphology.yaml` that detect existing initial consonants/prefixes before prepending (e.g., Class 8 replacing `ch-/k-/chi-/ki-` with `zv-` to yield `zvombo` instead of `zvichombo`; Class 11 preserving `ru-` initial roots to yield `ruvhumo` instead of `ruruvhumo`).
+3. **Noun Class & Prefix Handling in `morphology.yaml`**:
+   - Prevent double-prefixing by writing regex rules in `morphology.yaml` that detect existing initial consonants/prefixes before prepending.
 
 ## 3. Compilation via CI/CD
 The `src/[lang]/` directories are the structural hubs for their respective languages; they contain the `lexicon.csv` and `morphology.yaml` required by the Audition compiler.
-Once the `.md.au` file is saved in `src/[lang]/`, our build workers (`make build`) will automatically detect it, apply the grammar rules, compile it into `.md` within `src/`, and render HTML into `docs/`. Always run `make build` to verify clean compilation with zero unmapped `(KEY??)` fallbacks.
+Once the `.md.au` file is saved in `src/[lang]/`, running `make build` will automatically detect it, apply the grammar rules, compile it into `.md` within `src/[lang]/`, and render HTML into `docs/`. Always run `make build` to verify clean compilation with zero unmapped `(KEY??)` fallbacks.
 
 ### Summary of Directory Roles
 *   `wiki/` -> Pure English texts ("diegetic grist"). Only `.md` files.
