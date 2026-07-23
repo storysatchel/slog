@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/kisangani/diagetic_samples/aquaculture_addendum.md",
+                "file": "wiki/English_Signage_Reference/Commercial_and_Tourist/eridian_resort_notice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aquaculture_addendum"
-            }
-          },
-          {
-            "id": "f98fec9084c6a412",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/kisangani/diagetic_samples/boarding_action_dialogue.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "boarding_action_dialogue"
+              "title": "eridian_resort_notice"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,21 +183,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "f98fec9084c6a412",
+  "active": "80fc7c304fc72b7a",
   "lastOpenFiles": [
+    "src/ulanuuran/sample.md",
+    "src/twinworlder/sample.md",
+    "src/sperosi/sample.md",
+    "src/scipian/sample.md",
+    "src/salusan/sample.md",
     "src/retinalian/sample.md",
-    "src/kisangani/sample.md",
     "src/remuan/sample.md",
     "src/kubileyan/sample.md",
-    "src/twinworlder/sample.md",
-    "src/aurelian_basic/sample.md",
-    "src/salusan/sample.md",
-    "src/aglaean/sample.md",
-    "src/dajiaoan/sample.md",
-    "src/ulanuuran/sample.md",
-    "src/scipian/sample.md",
-    "src/sperosi/sample.md",
+    "src/kisangani/sample.md",
     "src/eridian_basic/sample.md",
+    "src/dajiaoan/sample.md",
+    "src/aurelian_basic/sample.md",
+    "src/aglaean/sample.md",
+    "src/kisangani/diagetic_samples/aquaculture_addendum.md",
+    "wiki/synthesis/audition-conlang-compiler-decolonial-rule-design.md",
+    "src/kisangani/Commercial_and_Tourist/scipio_auroral_viewing_rules.md",
+    "wiki/English_Signage_Reference/scipio_auroral_viewing_rules.md",
+    "wiki/concepts/The Kisangani Relational Governance Framework.md",
+    "src/kisangani/diagetic_samples/boarding_action_dialogue.md",
+    "wiki/concepts/kisangani-stellar-navigation.md",
     "docs/kisangani/diagetic_samples/dare_mediation.md.au",
     "docs/kisangani/diagetic_samples/dare_mediation.html",
     "src/kisangani/diagetic_samples/dare_mediation.md",
@@ -229,12 +221,6 @@
     "tools/audition/node_modules/typescript/lib/tsserverlibrary.d.ts",
     "tools/audition/node_modules/typescript/SECURITY.md",
     "tools/audition/node_modules/typescript/README.md",
-    "tools/audition/node_modules/typescript/lib/README.md",
-    "tools/audition/node_modules/prettier/README.md",
-    "tools/audition/node_modules/yaml/README.md",
-    "tools/audition/node_modules/@types/node/README.md",
-    "tools/audition/node_modules/husky/README.md",
-    "tools/audition/node_modules/pegjs/CHANGELOG.md",
     "docs/assets/parchment.png",
     "docs/assets/black-marble.jpg"
   ]
