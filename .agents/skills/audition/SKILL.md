@@ -32,7 +32,7 @@ When writing or editing .au files, you must use the IR syntax to tell Audition h
 
 > * **Gloss invocation**: Words are built by combining IDs from lexicon.csv with inflection tags from morphology.yaml.  
 > * **Format**: id\#INFLECTION1\#INFLECTION2  
-> * **Literal text**: Prefix with ^ to pass a word through unchanged (e.g., ^Arwen).  
+> * **Proper noun / Literal text**: Prefix with ^ to pass proper nouns or literal words through unchanged (e.g., ^Arwen).  
 > * **Capitalization**: Use the special \#CAP tag to capitalize a generated/inflected word (e.g., 1SG\#CAP).  
 > * **IR Blocks**: IR text is usually written in blocks or inline where Audition is expected to parse it. (Often shown in examples inside Markdown quotes, though Audition parses the whole .au file).
 

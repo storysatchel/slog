@@ -11,9 +11,15 @@ inflections:
   2SG:
   - - ^
     - u
+  3PL:
+  - - ^
+    - va
   3PL.SUBJ:
   - - ^
     - va
+  SUBJ:
+  - - ^
+    - ''
   APP:
   - - ([aiu][^aeiou]*)a$
     - $1ira
@@ -44,6 +50,8 @@ inflections:
   - - ^
     - mu
   CL10:
+  - - ^([kmz].*)$
+    - $1
   - - ^([pbmfv].*)$
     - m$1
   - - ^[rl](.*)$
@@ -78,6 +86,9 @@ inflections:
   CL2A:
   - - ^
     - va
+  CL21:
+  - - ^
+    - zi
   CL4:
   - - ^
     - mi
@@ -87,6 +98,9 @@ inflections:
   CL5ASSOC:
   - - ^
     - re
+  CL6ASSOC:
+  - - ^
+    - ma
   CL5:
   - - ^ganda$
     - ganda
@@ -109,7 +123,13 @@ inflections:
   - - ^
     - zvi
   CL9:
-  - - ^([pbmfv].*)$
+  - - ^([kmz].*)$
+    - $1
+  - - ^(dz.*)$
+    - $1
+  - - ^([bmfv].*)$
+    - $1
+  - - ^p(.*)$
     - m$1
   - - ^[rl](.*)$
     - nd$1
@@ -171,6 +191,9 @@ inflections:
   LOC18:
   - - ^
     - mu
+  NEG:
+  - - ^
+    - sa
   NEG_IND:
   - - ^
     - ha
@@ -179,13 +202,13 @@ inflections:
     - sa
   PASS:
   - - (ir|er)a?$
-    - $1w
+    - $1wa
   - - ([aiu][^aeiou]*)a?$
-    - $1iw
+    - $1iwa
   - - ([eo][^aeiou]*)a?$
-    - $1ew
+    - $1ewa
   - - a?$
-    - w
+    - wa
   PAST:
   - - ^
     - li
@@ -230,11 +253,24 @@ inflections:
     - madzishe
   - - ^bwe$
     - mabwe
+  - - ^mutumbwi$
+    - mitumbwi
   - - ^n([^y].*)
     - ny$1
   POSS:
   - - ^
     - angu
+  POSS_1PL:
+  - - (a|e|o|u|i)$
+    - $1du
+  - - ^
+    - idu
+  POSS_2PL:
+  - - ^
+    - enyu
+  POSS_3PL:
+  - - ^
+    - avo
   PRES:
   - - ^
     - na

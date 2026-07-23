@@ -17,6 +17,7 @@ title: Wiki Index
 ## References
 
 ## Synthesis
+- [[synthesis/audition-conlang-compiler-decolonial-rule-design]] — Audition Conlang Compiler Rule Design for Decolonial Conlang Syntax
 - [[synthesis/expanse-diegetic-signage-and-lore]] — Expanse Diegetic Signage and Xi-Mallow 434 Lore Constraints
 - [[synthesis/audition-compiler-morphology-workarounds]] — Audition Compiler Morphology Bug and Tag Adjustments
 
