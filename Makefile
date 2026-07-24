@@ -45,7 +45,11 @@ narrate: build
 		bash $(CURDIR)/tools/synth_audio.sh $$langname; \
 	done
 
-serve: build
+# Depends on `audio`, not `build` directly: local preview should always show
+# a complete page (audio included), matching what actually gets deployed.
+# `build`/`clean`/`scorecard` regenerate docs/ from scratch without
+# re-embedding audio, which is exactly how it kept silently going missing.
+serve: audio
 	npx http-server -o -c-1 -p 3000 docs
 
 # Reports, per language, how many wiki/English_Signage_Reference/<Category>/
