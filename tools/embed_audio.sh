@@ -54,7 +54,7 @@ find "$SRC_DIR" -name '*.md.au' | sort | while read -r aufile; do
   [[ -f "$htmlpath" ]] || continue
 
   # Only embed if not already present
-  if grep -q 'class="kisangani-audio"' "$htmlpath"; then
+  if grep -q 'class="conlang-audio"' "$htmlpath"; then
     continue
   fi
 
@@ -66,7 +66,7 @@ find "$SRC_DIR" -name '*.md.au' | sort | while read -r aufile; do
   divtmp="$(mktemp)"
   base64 -w0 "$mp3path" > "$b64tmp"
   {
-    printf '          <div class="kisangani-audio"><audio controls preload="none"><source src="data:audio/mpeg;base64,'
+    printf '          <div class="conlang-audio"><audio controls preload="none"><source src="data:audio/mpeg;base64,'
     cat "$b64tmp"
     printf '" type="audio/mpeg">Your browser does not support audio.</audio></div>'
   } > "$divtmp"

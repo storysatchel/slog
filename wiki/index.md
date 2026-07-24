@@ -4,7 +4,14 @@ title: Wiki Index
 
 # Wiki Index
 
-*This index is automatically maintained. Last updated: 2026-07-22T14:56:00Z*
+*This index is automatically maintained. Last updated: 2026-07-24T02:15:28Z*
+
+## Projects
+- [[projects/slog/slog]] — SLOG Project (Kisangani story world and computational linguistics)
+- [[projects/slog/concepts/mupanda-os]] — Mupanda OS Backend
+- [[projects/slog/dev/dev]] — SLOG Dev & Build Tooling (meta/development section)
+- [[projects/slog/dev/kisangani-audio-pipeline-architecture]] — Kisangani Audio Pipeline Architecture
+- [[projects/slog/dev/audition-gloss-punctuation-and-cap-convention]] — Audition Gloss Punctuation and #CAP Convention
 
 ## Concepts
 - [[concepts/shona-verbal-extension-stacking]] — How Bantu agglutinative architecture stacks multiple verbal extensions dynamically ( #shona #linguistics #compiler-design)

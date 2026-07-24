@@ -218,21 +218,21 @@ x-out:hover x-src {
   text-shadow: 0 1px #fff;
 }
 
-/* Kisangani Basic audio player */
-.kisangani-audio {
+/* Conlang narration audio player (any language under src/) */
+.conlang-audio {
   margin: 1em 0 0.5em 0;
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-.kisangani-audio::before {
+.conlang-audio::before {
   content: "🔊";
   font-size: 1.1em;
   opacity: 0.7;
 }
 
-.kisangani-audio audio {
+.conlang-audio audio {
   width: 100%;
   max-width: 480px;
   height: 32px;
