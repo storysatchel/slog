@@ -1,29 +1,29 @@
-> # __department#CL9 CL9ASSOC transit#CL9 CL9ASSOC confederation#CL9 solar#CL9__
-> ## __form#CL9 administrative#CL9 public#CL9 44B__
-> ### __application#CL9 CL9ASSOC relocation#CL9 civilian#CL9 interplanetary#CL9__
+> # __department#CL9#CAP CL9ASSOC transit#CL9 CL9ASSOC confederation#CL9 solar#CL9.__
+> ## __form#CL9#CAP administrative#CL9 public#CL9 44B.__
+> ### __application#CL9#CAP CL9ASSOC relocation#CL9 civilian#CL9 interplanetary#CL9.__
 
-> __CL9ID CL9ASSOC form#CL9 SC44B9982__
-> __fee#CL9 CL9ASSOC process#CL15 credit#CL10 500__
+> __CL9ID#CAP CL9ASSOC form#CL9 SC44B9982.__
+> __fee#CL9#CAP CL9ASSOC process#CL15 credit#CL10 500.__
 
-> **__part#CL7 A information#CL9 CL9ASSOC applicant#CL1__**
-> - __ name#CL5 legal#CL5 full#CL5 __
-> - __ origin#CL9 planetary#CL9 __
-> - __ number#CL5 CL5ASSOC CL9ID CL9ASSOC confederation#CL9 __
+> **__part#CL7#CAP A information#CL9 CL9ASSOC applicant#CL1.__**
+> - __ name#CL5#CAP legal#CL5 full#CL5. __
+> - __ origin#CL9#CAP planetary#CL9. __
+> - __ number#CL5#CAP CL5ASSOC CL9ID CL9ASSOC confederation#CL9. __
 
-> **__part#CL7 B detail#CL10 CL10ASSOC relocation#CL9__**
-> - __ habitat#CL9 CL9ASSOC destination#CL9 __
-> - __ purpose#CL9 primary#CL9 CL9ASSOC relocation#CL9 IMPcheck one#CL7__
-> __  contract#CL9 CL9ASSOC employment#CL9__
-> __  reunification#CL9 CL9ASSOC family#CL9__
-> __  placement#CL9 educational#CL9__
-> __  settlement#CL9 general#CL9__
+> **__part#CL7#CAP B detail#CL10 CL10ASSOC relocation#CL9.__**
+> - __ habitat#CL9#CAP CL9ASSOC destination#CL9. __
+> - __ purpose#CL9#CAP primary#CL9 CL9ASSOC relocation#CL9 IMPcheck one#CL7.__
+> __  contract#CL9#CAP CL9ASSOC employment#CL9.__
+> __  reunification#CL9#CAP CL9ASSOC family#CL9.__
+> __  placement#CL9#CAP educational#CL9.__
+> __  settlement#CL9#CAP general#CL9.__
 
-> **__part#CL7 C clearance#CL9 medical#CL9__**
-> - __ proof#CL9 CL9ASSOC therapy#CL9 CL9ASSOC adaptation#CL9 CL9ASSOC gravity#CL9 standard#CL9 YesNo __
-> - __ certification#CL9 CL9ASSOC tolerance#CL9 CL9ASSOC exposure#CL9 CL9ASSOC radiation#CL9 YesNo __
+> **__part#CL7#CAP C clearance#CL9 medical#CL9.__**
+> - __ proof#CL9#CAP CL9ASSOC therapy#CL9 CL9ASSOC adaptation#CL9 CL9ASSOC gravity#CL9 standard#CL9 YesNo. __
+> - __ certification#CL9#CAP CL9ASSOC tolerance#CL9 CL9ASSOC exposure#CL9 CL9ASSOC radiation#CL9 YesNo. __
 
-> **__part#CL7 D declaration#CL10__**
-> __PRO.1SG hereby#CL9 declare#1SG#FV COMP information#CL9 provide#CL9#PASS#PST be#CL9 accurate#CL9 CONJ COMP PRO.1SG submit#1SG#FV to#CL17 jurisdiction#CL9 all#CL9 CONJ law#CL10 CL10ASSOC confederation#CL9 solar#CL9 during#CL18 transit#CL9 CL9POSS.1SG CONJ upon#CL16 arrival#CL9 at#CL16 destination#CL9 CL9POSS.1SG.__
+> **__part#CL7#CAP D declaration#CL10.__**
+> __PRO#CAP.1SG hereby#CL9 declare#1SG#FV COMP information#CL9 provide#CL9#PASS#PST be#CL9 accurate#CL9 CONJ COMP PRO.1SG submit#1SG#FV to#CL17 jurisdiction#CL9 all#CL9 CONJ law#CL10 CL10ASSOC confederation#CL9 solar#CL9 during#CL18 transit#CL9 CL9POSS.1SG CONJ upon#CL16 arrival#CL9 at#CL16 destination#CL9 CL9POSS.1SG.__
 
-> __signature#CL9 __
-> __date#CL9 __
+> __signature#CL9#CAP. __
+> __date#CL9#CAP. __

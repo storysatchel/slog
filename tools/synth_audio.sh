@@ -41,39 +41,19 @@ STRIP_SCRIPT="$(mktemp)"
 trap 'rm -f "$STRIP_SCRIPT"' EXIT
 cat > "$STRIP_SCRIPT" <<'PYEOF'
 import sys, re
-
-def clean_block(line):
-    # Strip markdown block-prefix markers (blockquote, headings, bullets)
-    line = re.sub(r'^[>#*\-\s]+', '', line)
-    # Extract only the translated text from <x-out>TRANSLATED<x-src>...</x-src></x-out>
-    # (ignore the gloss source inside <x-src>)
-    line = re.sub(r'<x-src>[^<]*</x-src>', '', line)
-    line = re.sub(r'<x-out>([^<]*)</x-out>', r'\1', line)
-    line = re.sub(r'<[^>]+>', ' ', line)
-    line = re.sub(r'_+', ' ', line)
-    line = re.sub(r'[+\*\[\]\|`←↑→]', ' ', line)
-    return re.sub(r'\s+', ' ', line).strip()
-
-# Each markdown line is a distinct signage line/heading/bullet/speaker turn.
-# Collapsing them all with a single space (the old approach) ran unrelated
-# lines together into one run-on utterance with no pause between them, and
-# never capitalized anything. Treat each non-empty line as its own sentence:
-# terminate it if it lacks its own punctuation, then join and capitalize.
-blocks = []
-for raw_line in sys.stdin.read().split('\n'):
-    block = clean_block(raw_line)
-    if not block:
-        continue
-    if block[-1] not in '.!?':
-        block += '.'
-    blocks.append(block)
-
-text = ' '.join(blocks)
-text = re.sub(
-    r'(^\s*|[.!?]\s+)([a-z])',
-    lambda m: m.group(1) + m.group(2).upper(),
-    text,
-)
+text = sys.stdin.read()
+# Extract only the translated text from <x-out>TRANSLATED<x-src>...</x-src></x-out>
+# (ignore the gloss source inside <x-src>). Sentence punctuation and the #CAP
+# inflection are authored directly in the .md.au gloss (Audition's own
+# convention), so by the time this runs the compiled text is already properly
+# punctuated and capitalized -- no reconstruction needed here.
+text = re.sub(r'<x-src>[^<]*</x-src>', '', text)
+text = re.sub(r'<x-out>([^<]*)</x-out>', r'\1', text)
+# Strip remaining tags and markdown syntax
+text = re.sub(r'<[^>]+>', ' ', text)
+text = re.sub(r'_+', ' ', text)
+text = re.sub(r'[>#+\*\[\]\|`←↑→]', ' ', text)
+text = re.sub(r'\s+', ' ', text).strip()
 print(text)
 PYEOF
 

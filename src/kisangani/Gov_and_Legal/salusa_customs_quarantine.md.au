@@ -1,21 +1,21 @@
-> # __signage#CL9 CL9ASSOC quarantine#CL9 ecological#CL9 CL9ASSOC waystation#CL9 CL9ASSOC crossroad#CL10 Salusan#CL10__
+> # __signage#CL9#CAP CL9ASSOC quarantine#CL9 ecological#CL9 CL9ASSOC waystation#CL9 CL9ASSOC crossroad#CL10 Salusan#CL10.__
 
 ---
 
-> **__attention#CL9 arrival#CL2 all#CL2__**
-> **__quarantine#CL9 ecological#CL9 mandatory#CL9 be#CL9 in#CL18 effect#CL9__**
+> **__attention#CL9#CAP arrival#CL2 all#CL2.__**
+> **__quarantine#CL9#CAP ecological#CL9 mandatory#CL9 be#CL9 in#CL18 effect#CL9.__**
 
-> __welcome#CL15 to#CL17 waystation#CL9 CL9ASSOC crossroad#CL10 Salusan.#CL10 protect#INF biosphere#CL9 CL9POSS.1PL fragile#CL9 protocol#CL10 ecological#CL10 strict#CL10 be#CL10 enforce#CL10#PASS#FV.__
+> __welcome#CL15#CAP to#CL17 waystation#CL9 CL9ASSOC crossroad#CL10 Salusan.#CL10 protect#INF biosphere#CL9 CL9POSS.1PL fragile#CL9 protocol#CL10 ecological#CL10 strict#CL10 be#CL10 enforce#CL10#PASS#FV.__
 
-> **__declare#IMP#FV immediately#CL9__**
-> * __ material#CL10 all#CL10 organic#CL10 CL10plant seed#CL10 spore#CL10__
-> * __ fauna#CL9 live#CL9 CONJ deceased#CL9__
-> * __ soil#CL9 unsterilized#CL9 CONJ sample#CL10 geological#CL10__
-> * __ specimen#CL10 biological#CL10 unprocessed#CL10__
+> **__declare#IMP#FV#CAP immediately#CL9.__**
+> * __ material#CL10#CAP all#CL10 organic#CL10 CL10plant seed#CL10 spore#CL10.__
+> * __ fauna#CL9#CAP live#CL9 CONJ deceased#CL9.__
+> * __ soil#CL9#CAP unsterilized#CL9 CONJ sample#CL10 geological#CL10.__
+> * __ specimen#CL10#CAP biological#CL10 unprocessed#CL10.__
 
-> **__warning#CL9__**
-> __importation#CL9 unauthorized#CL9 CONJ concealment#CL9 CL9ASSOC agent#CL10 biological#CL10 be#CL9 offense#CL9 severe#CL9 punishable#CL9 by#CL16 deportation#CL9 immediate#CL9 forfeiture#CL9 CL9ASSOC asset#CL7 CONJ revocation#CL9 permanent#CL9 CL9ASSOC privilege#CL10 CL10ASSOC transit.#CL9__
+> **__warning#CL9#CAP.__**
+> __importation#CL9#CAP unauthorized#CL9 CONJ concealment#CL9 CL9ASSOC agent#CL10 biological#CL10 be#CL9 offense#CL9 severe#CL9 punishable#CL9 by#CL16 deportation#CL9 immediate#CL9 forfeiture#CL9 CL9ASSOC asset#CL7 CONJ revocation#CL9 permanent#CL9 CL9ASSOC privilege#CL10 CL10ASSOC transit.#CL9.__
 
-> __please#IMP proceed#IMP#FV directly#CL9 to#CL17 chamber#CL10 designated#CL10 CL10ASSOC decontamination#CL9 CONJ sterilization.#CL9__
+> __please#IMP#CAP proceed#IMP#FV directly#CL9 to#CL17 chamber#CL10 designated#CL10 CL10ASSOC decontamination#CL9 CONJ sterilization.#CL9.__
 
 ---

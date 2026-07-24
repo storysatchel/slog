@@ -1,8 +1,8 @@
-# > __facility#CL9 decommissioned__
-## > __quarantine#CL9 permanent COP LOC effect__
+# > __facility#CL9#CAP decommissioned.__
+## > __quarantine#CL9#CAP permanent COP LOC effect.__
 
-> __site#CL7 this#CL7 COP permanently sealed under authority#CL9 CL9.ASSOC Navy Nations United.__
-> __NEG right#CL10 salvage#CL10.ASSOC apply. NEG beacon#CL10 emergency#CL10.ASSOC FUT answer#PASS from within perimeter#CL9 this.#CL9__
-> __vessel#CL9 any approaching within kilometer#CL10 50 FUT fire#PASS LOC INS platform#CL10 defense#CL10.ASSOC automated UNN.__
+> __site#CL7#CAP this#CL7 COP permanently sealed under authority#CL9 CL9.ASSOC Navy Nations United.__
+> __NEG#CAP right#CL10 salvage#CL10.ASSOC apply. NEG#CAP beacon#CL10 emergency#CL10.ASSOC FUT answer#PASS from within perimeter#CL9 this.#CL9.__
+> __vessel#CL9#CAP any approaching within kilometer#CL10 50 FUT fire#PASS LOC INS platform#CL10 defense#CL10.ASSOC automated UNN.__
 
-**> __NEGIMP attempt entry.#CL9 2PL PRF warn.#PASS__**
+**> __NEGIMP#CAP attempt entry.#CL9 2PL PRF warn.#PASS.__**
