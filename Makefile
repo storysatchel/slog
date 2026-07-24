@@ -6,7 +6,7 @@ AUDITION := tools/audition/au
 # tree to mdsite in a single pass.
 LANGUAGES := $(dir $(wildcard src/*/lexicon.csv))
 
-.PHONY: setup build serve clean audio narrate
+.PHONY: setup build serve clean audio narrate scorecard
 
 setup:
 	git submodule update --init --recursive
@@ -47,6 +47,12 @@ narrate: build
 
 serve: build
 	npx http-server -o -c-1 -p 3000 docs
+
+# Reports, per language, how many wiki/English_Signage_Reference/<Category>/
+# signs have a matching src/<lang>/<Category>/<slug>.md.au. Reads only
+# committed sources, so it works without ever running `make build` first.
+scorecard:
+	python3 $(CURDIR)/tools/signage_scorecard.py
 
 clean:
 	rm -rf docs
