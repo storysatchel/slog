@@ -49,9 +49,11 @@ serve: build
 	npx http-server -o -c-1 -p 3000 docs
 
 # Reports, per language, how many wiki/English_Signage_Reference/<Category>/
-# signs have a matching src/<lang>/<Category>/<slug>.md.au. Reads only
-# committed sources, so it works without ever running `make build` first.
-scorecard:
+# signs have a matching src/<lang>/<Category>/<slug>.md.au, plus a completeness
+# check for missing lexicon roots/morphology rules (Audition's "(word??)"
+# fallback markers) in the compiled output. Depends on `build` so the
+# completeness half is always checked against fresh output, not stale.
+scorecard: build
 	python3 $(CURDIR)/tools/signage_scorecard.py
 
 clean:

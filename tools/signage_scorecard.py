@@ -2,7 +2,9 @@
 """tools/signage_scorecard.py
 
 Reports, per src/<lang>, how many of the canonical wiki/English_Signage_Reference
-signs have been translated (i.e. have a matching src/<lang>/<Category>/<slug>.md.au).
+signs have been translated (i.e. have a matching src/<lang>/<Category>/<slug>.md.au),
+and separately, whether the compiled output for those signs is actually complete
+-- no missing lexicon roots or morphology/inflection rules.
 
 The canonical sign list is every *.md file at least two levels deep under
 wiki/English_Signage_Reference/<Category>/ -- this deliberately excludes the
@@ -14,6 +16,22 @@ the reference set (e.g. Kisangani's diagetic_samples/, which is original
 content, not a translation of an English reference) is correctly never
 counted here, since this script only ever iterates the reference set.
 
+Root/morphology completeness: Audition (tools/audition/src/translator.ts)
+renders every untranslatable gloss as literally "(${s}??)" via one shared
+`untranslatable()` helper, called from exactly two places:
+  - a lexicon lookup miss -- untranslatable(gloss.lexeme), e.g. "(dog??)",
+    always a bare word with no "#" inside the parens.
+  - a morphology/inflection lookup miss -- untranslatable(`${stem}#${inflection}`),
+    e.g. "(kwa#CL17??)", always containing "#" (stem then the failed tag).
+So "does this fallback contain a '#'" is not a heuristic -- it's exactly
+Audition's own distinction between "missing root" and "missing morphology
+rule", read back out of its output format. A failed inflection whose stem
+was ALSO an unresolved root cascades through the same reduce() one tag at a
+time, producing nested wraps like "((by??)#CL16??)" -- peeled one layer at a
+time below, attributing one miss to each layer, which is how "by" not being
+in the lexicon and "#CL16" separately having no matching rule both get
+counted independently for that one word.
+
 Usage:
   python3 tools/signage_scorecard.py
 """
@@ -24,7 +42,7 @@ ROOT = Path(__file__).resolve().parent.parent
 REFERENCE_DIR = ROOT / "wiki" / "English_Signage_Reference"
 SRC_DIR = ROOT / "src"
 
-FALLBACK_MARKER = re.compile(r"\?\?")
+FALLBACK = re.compile(r"\(([^()]*)\?\?\)")
 
 
 def canonical_signs():
@@ -43,15 +61,32 @@ def languages():
     )
 
 
-def fallback_count(lang, category, slug):
-    """Best-effort count of untranslated '(word??)' markers in the compiled
-    .md, if it happens to exist (it's gitignored/ephemeral -- built by `make
-    build`). Returns None if not built, so callers can distinguish "0
-    fallbacks" from "not built yet"."""
+def classify_fallbacks(text):
+    """(root_misses, morphology_misses) in one compiled .md's text. Repeatedly
+    strips innermost (...??) groups so nested wraps from cascading multi-tag
+    failures get peeled one layer at a time (see module docstring)."""
+    root_misses = 0
+    morphology_misses = 0
+    while True:
+        matches = list(FALLBACK.finditer(text))
+        if not matches:
+            break
+        for m in matches:
+            if "#" in m.group(1):
+                morphology_misses += 1
+            else:
+                root_misses += 1
+        text = FALLBACK.sub("", text)
+    return root_misses, morphology_misses
+
+
+def compiled_stats(lang, category, slug):
+    """(root_misses, morphology_misses) for one sign's compiled .md, or None
+    if it hasn't been built (compiled .md is gitignored/ephemeral)."""
     compiled = SRC_DIR / lang / category / f"{slug}.md"
     if not compiled.exists():
         return None
-    return len(FALLBACK_MARKER.findall(compiled.read_text(encoding="utf-8")))
+    return classify_fallbacks(compiled.read_text(encoding="utf-8"))
 
 
 def main():
@@ -85,7 +120,9 @@ def main():
     print(row(header_cells, "Language"))
     print("-" * (lang_col_width + sum(col_widths.values())))
 
-    fallback_notes = []
+    gaps = []  # (lang, category, slug, root_misses, morphology_misses)
+    built_anything = False
+    lang_implemented_count = {}
     for lang in langs:
         cells = {}
         lang_implemented = 0
@@ -99,24 +136,70 @@ def main():
             cells[category] = f"{implemented}/{len(cat_signs)}"
 
             for slug in cat_signs:
-                if (SRC_DIR / lang / category / f"{slug}.md.au").exists():
-                    fc = fallback_count(lang, category, slug)
-                    if fc:
-                        fallback_notes.append((lang, category, slug, fc))
+                if not (SRC_DIR / lang / category / f"{slug}.md.au").exists():
+                    continue
+                stats = compiled_stats(lang, category, slug)
+                if stats is None:
+                    continue
+                built_anything = True
+                root_misses, morphology_misses = stats
+                if root_misses or morphology_misses:
+                    gaps.append((lang, category, slug, root_misses, morphology_misses))
 
         pct = round(100 * lang_implemented / total_signs) if total_signs else 0
         cells["TOTAL"] = f"{lang_implemented}/{total_signs} ({pct}%)"
+        lang_implemented_count[lang] = lang_implemented
         print(row(cells, lang))
 
-    if fallback_notes:
+    print()
+    if not built_anything:
+        print("Root/Morphology Completeness: skipped -- nothing compiled yet, run `make build` first.")
+        return
+
+    print(f"Root/Morphology Completeness  ({len(gaps)} implemented sign(s) with gaps)")
+    print()
+    print("Every gap is read directly out of Audition's own untranslatable-gloss")
+    print('format, "(${stem}??)" vs "(${stem}#${tag}??)" -- see module docstring.')
+    print()
+
+    by_lang = {}
+    for lang, category, slug, root_misses, morphology_misses in gaps:
+        r, m = by_lang.get(lang, (0, 0))
+        by_lang[lang] = (r + root_misses, m + morphology_misses)
+
+    summary_langs = [l for l in langs if lang_implemented_count.get(l, 0) > 0]
+    if summary_langs:
+        lw = max(len("Language"), max(len(l) for l in summary_langs)) + 2
+        print(
+            "Language".ljust(lw)
+            + "Root Misses".rjust(14)
+            + "Morphology Misses".rjust(20)
+            + "Total Gaps".rjust(13)
+        )
+        print("-" * (lw + 14 + 20 + 13))
+        for lang in summary_langs:
+            r, m = by_lang.get(lang, (0, 0))
+            print(
+                lang.ljust(lw)
+                + str(r).rjust(14)
+                + str(m).rjust(20)
+                + str(r + m).rjust(13)
+            )
         print()
-        print(f"Note: {len(fallback_notes)} implemented sign(s) still have untranslated")
-        print("'(word??)' fallback markers in their compiled output (run `make build` first")
-        print("if this section looks empty -- it only inspects already-compiled .md files):")
-        for lang, category, slug, fc in sorted(fallback_notes, key=lambda t: -t[3])[:10]:
-            print(f"  {fc:>4}  {lang}/{category}/{slug}")
-        if len(fallback_notes) > 10:
-            print(f"  ... and {len(fallback_notes) - 10} more")
+
+    if gaps:
+        print("Worst signs (by total gaps):")
+        for lang, category, slug, root_misses, morphology_misses in sorted(
+            gaps, key=lambda t: -(t[3] + t[4])
+        )[:10]:
+            print(
+                f"  {root_misses + morphology_misses:>4}  {lang}/{category}/{slug}"
+                f"  (root: {root_misses}, morphology: {morphology_misses})"
+            )
+        if len(gaps) > 10:
+            print(f"  ... and {len(gaps) - 10} more")
+    else:
+        print("No gaps found in any built, implemented sign.")
 
 
 if __name__ == "__main__":
